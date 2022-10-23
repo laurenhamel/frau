@@ -17,6 +17,7 @@
     "build:types": "tsc",
     "dev": "NODE_ENV=development yarn build",
     "dist": "NODE_ENV=production yarn build",
+    "publish": "yarn build",
     "start": "nodemon"
   },
   "devDependencies": {
