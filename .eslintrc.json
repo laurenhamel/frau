@@ -1,0 +1,72 @@
+{
+  "root": true,
+  "env": {
+    "es6": true,
+    "node": true
+  },
+  "parser": "@typescript-eslint/parser",
+  "plugins": [
+    "@typescript-eslint",
+    "import",
+    "jest",
+    "lodash",
+    "prettier",
+    "woke"
+  ],
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:jest/recommended",
+    "plugin:lodash/recommended",
+    "plugin:import/recommended",
+    "plugin:import/typescript",
+    "plugin:prettier/recommended"
+  ],
+  "overrides": [
+    {
+      "files": [
+        "**/*.spec.{js,ts}"
+      ],
+      "env": {
+        "jest": true
+      }
+    }
+  ],
+  "settings": {
+    "import/extensions": [
+      ".js",
+      ".ts"
+    ]
+  },
+  "rules": {
+    "@typescript-eslint/no-empty-interface": [
+      "off"
+    ],
+    "import/no-cycle": [
+      "error",
+      {
+        "maxDepth": 1
+      }
+    ],
+    "import/no-named-as-default": [
+      "off"
+    ],
+    "import/order": [
+      "error",
+      {
+        "alphabetize": {
+          "order": "asc",
+          "caseInsensitive": true
+        },
+        "warnOnUnassignedImports": true,
+        "newlines-between": "never"
+      }
+    ],
+    "lodash/prefer-invoke-map": [
+      "off"
+    ],
+    "prettier/prettier": [
+      "error"
+    ]
+  }
+}

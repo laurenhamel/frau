@@ -1,0 +1,49 @@
+{
+  "name": "frau",
+  "version": "1.0.0",
+  "description": "A pluggable build system for monorepos built on Yarn workspaces",
+  "author": "Lauren Hamel",
+  "license": "MIT",
+  "packageManager": "yarn@3.2.3",
+  "main": "lib/dist/index.js",
+  "typings": "lib/types/index.d.ts",
+  "bin": "lib/dist/index.js",
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "build": "yarn build:dist && yarn build:types",
+    "build:dist": "node .esbuild.js",
+    "build:types": "tsc",
+    "dev": "NODE_ENV=development yarn build",
+    "dist": "NODE_ENV=production yarn build",
+    "start": "nodemon"
+  },
+  "devDependencies": {
+    "@types/lodash": "^4.14.185",
+    "@types/node": "^18.7.16",
+    "@typescript-eslint/parser": "^5.36.2",
+    "esbuild-plugin-replace": "^1.2.0",
+    "eslint": "^8.23.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-jest": "^27.0.4",
+    "eslint-plugin-lodash": "^7.4.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-woke": "^1.0.1",
+    "nodemon": "^2.0.19",
+    "typescript": "^4.8.3"
+  },
+  "dependencies": {
+    "child_process": "^1.0.2",
+    "commander": "^9.4.0",
+    "esbuild": "^0.15.10",
+    "fs-extra": "^10.1.0",
+    "glob": "^8.0.3",
+    "lodash": "^4.17.21",
+    "minimist": "^1.2.6",
+    "path": "^0.12.7",
+    "require-from-string": "^2.0.2",
+    "yaml": "^2.1.1"
+  }
+}
