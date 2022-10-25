@@ -29,8 +29,8 @@ export function attempt<T extends any>(callback: (() => T) | (() => T)[], fallba
 export function flags(args: Record<string, boolean | number | string>): string {
   return reduce(args, (result, value, key) => {
     const prefix = key.length === 1 ? '-' : '--';
-    
-    key = value === false ? '' : `${prefix}${key}=`;
+
+    key = isBoolean(value) ? value === false ? '' : `${prefix}${key}` : `${prefix}${key}=`;
     value = isBoolean(value) ? '' : `${value}`;
 
     return `${result} ${key}${value}`;
