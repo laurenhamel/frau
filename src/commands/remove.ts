@@ -11,7 +11,7 @@ export interface RemoveOptions extends GlobalOptions {}
 const command: Command<RemoveParameters, RemoveOptions> = {
   name: "remove",
   alias: "-",
-  description: "Remove one or more dependency from one or more workspaces",
+  description: "Remove one or more dependencies from one or more workspaces",
   parameters: [
     {
       name: "dependencies",
