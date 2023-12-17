@@ -4,7 +4,7 @@
   "description": "A pluggable build system for monorepos built on Yarn workspaces",
   "author": "Lauren Hamel",
   "license": "MIT",
-  "packageManager": "yarn@3.2.3",
+  "packageManager": "yarn@4.0.2",
   "main": "lib/dist/index.js",
   "typings": "lib/types/index.d.ts",
   "bin": "lib/dist/index.js",
@@ -21,7 +21,7 @@
     "start": "nodemon"
   },
   "devDependencies": {
-    "@types/lodash": "^4.14.185",
+    "@types/lodash": "^4.14.195",
     "@types/node": "^18.7.16",
     "@typescript-eslint/parser": "^5.36.2",
     "esbuild-plugin-replace": "^1.2.0",
@@ -33,18 +33,23 @@
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-woke": "^1.0.1",
     "nodemon": "^2.0.19",
+    "prettier": "^2.8.8",
     "typescript": "^4.8.3"
   },
   "dependencies": {
+    "chalk": "^3",
     "child_process": "^1.0.2",
-    "commander": "^9.4.0",
+    "color": "^4.2.3",
+    "commander": "^9.5.0",
     "esbuild": "^0.15.10",
+    "fixed-width-string": "^2.0.0",
     "fs-extra": "^10.1.0",
     "glob": "^8.0.3",
     "lodash": "^4.17.21",
     "minimist": "^1.2.6",
     "path": "^0.12.7",
     "require-from-string": "^2.0.2",
+    "string-to-color": "^2.2.2",
     "yaml": "^2.1.1"
   }
 }
