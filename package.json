@@ -1,6 +1,6 @@
 {
   "name": "frau",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "A pluggable build system for monorepos built on Yarn workspaces",
   "author": "Lauren Hamel",
   "license": "MIT",
