@@ -37,3 +37,7 @@ Commands:
   run|r [options] <script> [workspaces...]           Run a script in one or more workspaces
   help [command]                                     display help for command
 ```
+
+## Extensibility
+
+To extend the functionality of `frau`, define your own [commands](src/commands) in a directory (e.g., `.frau`), then pass the directory path into the CLI using the `--plugins`/`-P` option.
